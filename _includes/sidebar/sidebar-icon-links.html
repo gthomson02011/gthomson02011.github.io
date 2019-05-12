@@ -1,0 +1,8 @@
+<div id="sidebar-icon-links">
+  {% for link in site.links %}
+    <a class="icon-link" title="{{ link.name }}"
+       href="{{ link.url }}">
+      {% include utils/icon.html icon_class=link.icon_class %}
+    </a>
+  {% endfor %}
+</div>

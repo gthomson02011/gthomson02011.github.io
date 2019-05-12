@@ -1,0 +1,14 @@
+<header>
+  {% if page.layout == "index" %}
+    <h1 class="site-title">
+      {{ site.title }}
+    </h1>
+  {% else %}
+    <div class="site-title">
+      <a href="{{ site.baseurl }}/">
+        {% include utils/icon.html icon_class="fas fa-arrow-left" %}
+        {{ site.title }}
+      </a>
+    </div>
+  {% endif %}
+</header>

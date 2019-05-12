@@ -1,0 +1,18 @@
+{% assign collection = site.collections | where: "label", include.item.collection | first %}
+<div class="card mb-2 teaser-small">
+  {% if include.item.image %}
+    <a href="{{ site.baseurl }}{{ include.item.url }}">
+      <img class="card-img-top" src="{{ site.image_path }}{{ collection.label }}/{{ include.item.image }}">
+    </a>
+  {% endif %}
+  <div class="card-body">
+    <h6 class='document-type'><a href="/{{ collection.index_url }}/">{{ collection.title }}</a></h6>
+    <h5 class="card-title"><a href="{{ site.baseurl }}{{ include.item.url }}">{{ include.item.title }}</a></h5>
+    {% if include.verbose and include.item.description %}
+      <p class='description'>{{ include.item.description }}</p>
+    {% endif %}
+  </div>
+  <div class="card-footer">
+    {% include item-meta.html item=include.item teaser=true %}
+  </div>
+</div>

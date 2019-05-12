@@ -1,0 +1,13 @@
+{% for node in site.pages %}
+  {% if node.layout == "tags" %}
+    {% assign tags_page = node %}
+  {% endif %}
+{% endfor %}
+
+<div class='tags mt-1'>
+  {% for tag in include.item.tags %}
+    <span class="tag">
+      {% include utils/icon.html icon_class='fas fa-tag' %}&nbsp;{{ tag }}
+    </span>
+  {% endfor %}
+</div>
