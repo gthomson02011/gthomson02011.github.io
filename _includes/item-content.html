@@ -1,0 +1,12 @@
+<div class='item-content'>
+  {{ content }}
+  {% if page.skills_matter_link %}
+    <p>This talk was filmed at the London Django Meetup. You can watch the video on the Skills Matter
+    website <a href="{{ page.skills_matter_link }}">here</a>.</p>
+  {% endif %}
+  {% if page.youtube_embed_url %}
+    <div class="embed-responsive embed-responsive-16by9 mt-5">
+      <iframe class="embed-responsive-item" src="{{ page.youtube_embed_url }}?rel=0" allowfullscreen></iframe>
+    </div>
+  {% endif %}
+</div>

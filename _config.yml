@@ -1,0 +1,43 @@
+title:  David Seddon
+email:  david@seddonym.me
+
+collections:
+  posts:
+    title: Blog post
+    index_url: blog
+  talks:
+    output: true
+    title: Talk
+    index_url: talks
+
+links:
+  - name: Github
+    url: https://www.github.com/seddonym
+    icon_class: "fab fa-github"
+
+  - name: Stack Overflow
+    url: https://stackoverflow.com/story/seddonym
+    icon_class: "fab fa-stack-overflow"
+
+  - name: Twitter
+    url: https://twitter.com/seddonym
+    icon_class: "fab fa-twitter"
+
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/seddonym
+    icon_class: "fab fa-linkedin"
+
+image_path: '/assets/img/'
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+disqus:
+  shortname: seddonym
+
+google_analytics: UA-118442361-1
